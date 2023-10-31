@@ -1,0 +1,147 @@
+
+  body {
+    background-image: url(Noorderlicht.jpg);
+    color:white;
+    background-attachment: fixed ;
+background-size: cover;
+    margin: 0 10% 0 10%;
+
+}
+
+
+h1 {
+  font-size: 60px;
+  }
+
+h1, h2 {
+  border: 4px solid orange;
+  color: #FFFFFF;
+  background-color: maroon;
+  text-align : center;
+  font-family: Georgia,Times,serif;
+  font-style: italic;
+  font-weight: normal;
+}
+
+td{
+padding: 15px ;
+border-radius: 20px 20px 20px 20px;
+}
+
+th{
+padding: 10px ;
+border-radius: 20px 20px 20px 20px;
+}
+
+h2 {
+  line-height: 100%;
+  font-variant: small-caps;
+  font-size: 50px;
+}
+
+p {
+  border: 1px Maroon double;
+  border-radius: 20px 20px 20px 20px;
+  word-spacing: 1px;
+  letter-spacing: 1px;
+  text-indent: 20px;
+background-color: black;
+color: white;
+font-family: cursive;
+}
+
+iframe {
+text-align: left;
+
+}
+
+p a:visited {
+  /* Is er op een link in een paragraaf geklikt? Kleur: blauw */
+  color: rgb(147, 117, 255);
+}
+
+a:link {
+  /* Links waar nog NIET op geklikt is hebben kleur geel*/
+  color: Blue;
+}
+
+
+a { /* Alle links in een lijst niet onderstrepen*/
+  text-decoration: none;
+}
+
+#vet {
+  font-size: 20px;
+color: Red;
+}
+
+#vet1 {
+  color: orange;
+}
+
+#vet2 {
+  color: rgb(54, 201, 203);
+}
+
+#vet3 {
+  color: rgb(54, 243, 96);
+}
+
+#vet4 {
+  color: rgb(238, 130, 238);
+}
+
+#vet5 {
+  color: dodgerblue;
+}
+
+p:hover {
+
+}
+
+a:link {
+
+  color: Blue;
+}
+
+p :visited {
+
+  color: white;
+}
+
+
+
+li:active {
+  font-size: 30px;
+}
+
+table.mensen { /* Een rand om de buitenkant alleen*/
+  border: 1px solid white;
+ border-collapse: collapse;
+}
+
+table.mensen th { /* Een rand om de buitenkant alleen*/
+    border: 1px solid red;
+
+}
+
+table.mensen td { /* Een rand om de buitenkant alleen*/
+    border: 1px solid red;
+}
+
+.menu> a{
+  border: 2px solid orange;
+  color: #FFFFFF;
+  background-color: maroon;
+margin: 15px;
+
+}
+
+.menu a:hover {
+font-size: 25px;
+
+}
+
+ul {
+  color:tomato;
+}

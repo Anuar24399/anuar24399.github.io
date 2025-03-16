@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #007B73;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zorg ervoor dat de container bovenaan begint */
+    justify-content: flex-start; /* Zorg ervoor dat alles bovenaan begint */
+    height: 100vh;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.top-bar {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center; /* Zorg ervoor dat het logo verticaal gecentreerd is */
+    padding-left: 20px; /* Voeg wat ruimte toe aan de linkerkant */
+}
+
+.login-container {
+    background: white;
+    padding: 0px 20px 30px 30px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Vergroot de container naar 400px */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 120px; /* Verplaatst de container onder de witte balk */
+}
+
+.tab-container {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.tab {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    color: #005E5D;
+}
+
+.tab-line {
+    width: 100%;
+    height: 2px;
+    background-color: #DEDEDE;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.tab-indicator {
+    width: 50%;
+    height: 2px;
+    background-color: #005E5D;
+    position: absolute;
+    bottom: 0;
+    left: 0; /* Begin bij de rand van de container */
+}
+
+h1 {
+    font-size: 33px;
+    font-weight: normal;
+    margin: 20px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px; /* Kleinere tekstgrootte */
+    font-weight: bold; /* Maak de tekst vetgedrukt */
+    margin-bottom: 10px;
+    color: rgb(60, 94, 94); /* Kleur voor "Rekening- en pasnummer" */
+}
+
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    border: 1px solid #DEDEDE;
+    font-size: 16px;
+    width: 55%; /* Zorg ervoor dat de invulbalken dezelfde breedte hebben als de container */
+}
+
+button {
+    padding: 11px 17px; /* Kleinere padding voor de knop */
+    font-size: 14px; /* Kleinere tekstgrootte voor de knop */
+    background-color: #FFD200;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    align-self: flex-start; /* Zet de knop naar links */
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: #FFE263;
+}
+
+.top-bar {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center; /* Zorg ervoor dat het logo verticaal gecentreerd is */
+    padding-left: 20px; /* Voeg wat ruimte toe aan de linkerkant */
+}
+
+.logo {
+    height: 35px; /* Maak het logo kleiner */
+    width: auto; /* Zorg ervoor dat de verhoudingen behouden blijven */
+    margin-left: 50px; /* Voeg ruimte toe aan de rechterkant van het logo */
+}
+
+@media (max-width: 768px) {
+    .logo {
+        height: 30px; /* Maak het logo kleiner voor mobiele apparaten */
+        margin-left: 5px; /* Zet de marge bijna op nul, voeg alleen 5px marge toe */
+    }
+}

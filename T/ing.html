@@ -34,6 +34,10 @@
         <input type="text" id="username" name="username" required placeholder="">
         <label for="password">Wachtwoord</label>
         <input type="password" id="password" name="password" required placeholder="">
+        <div class="remember-checkbox">
+          <input type="checkbox" id="remember" name="remember">
+          <label for="remember">Onthoud mijn gebruikersnaam</label>
+        </div>
         <div class="login-actions">
           <button type="submit" class="login-button">Inloggen</button>
         </div>
@@ -42,18 +46,20 @@
     <div class="footer-links-container">
       <div class="footer-links">
         <a href="#">Word klant</a>
-        <span class="footer-separator"></span>
+        <span class="footer-separator">|</span>
         <a href="#">Veilig bankieren</a>
-        <span class="footer-separator"></span>
+        <span class="footer-separator">|</span>
         <a href="#">Privacy en cookies</a>
-        <span class="footer-separator"></span>
+        <span class="footer-separator">|</span>
         <a href="#">Disclaimer</a>
       </div>
     </div>
   </main>
   <img src="ing logo's/ING_HalfLion_Reversed.svg" class="half-lion" alt="ING Half Lion">
   <script>
-    document.addEventListener('DOMContentLoaded', function(){ switchTab('prive'); });
+    document.addEventListener('DOMContentLoaded', function(){
+      switchTab('prive');
+    });
     function switchTab(tab){
       var indicator = document.querySelector('.tab-indicator');
       indicator.style.left = (tab==='prive') ? "0%" : "50%";

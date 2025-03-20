@@ -167,7 +167,7 @@ input[type="password"] {
   font-size: 16px;
   color: #696969;
 }
-.footer-links a {
+.footer-links span {
   color: #696969;
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -190,8 +190,26 @@ input[type="password"] {
     width: 100%;
     padding: 20px;
   }
-  .footer-links { display: block; text-align: left; }
-  .footer-links a { display: block; margin: 2px 10px; }
+  .footer-links-container {
+    width: 100%;
+    margin: 20px 0;
+    text-align: left;
+    padding-left: 10px; /* extra ruimte links */
+  }
+  .footer-links {
+    display: block;
+  }
+  .footer-links a {
+    display: block;
+    width: fit-content;
+    margin: 0px 0 5px 15px; /* hier is 15px margin-left toegevoegd */
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: background-color 0.3s ease;
+  }
+  .footer-links a:hover {
+    background-color: #DCDCEB;
+  }
   .half-lion { display: none; }
   .logo { margin-left: 0; }
 }

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Dossier online</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="vermeer logo's/v.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vermeer.css">
+</head>
+<body>
+
+  <!-- Header met social media iconen -->
+  <header class="top-bar">
+    <div class="social-media">
+      <a href="#"><img src="vermeer logo's/facebook-yellow.png" alt="Facebook"></a>
+      <a href="#"><img src="vermeer logo's/linkedin-yellow.png" alt="LinkedIn"></a>
+    </div>
+  </header>
+
+  <!-- Container met menu-balk en hoofdinhoud -->
+  <div class="container">
+    <aside class="menu-bar">
+      <div class="hamburger-icon"></div>
+    </aside>
+
+    <main class="main-content">
+      <div class="logo">
+        <img src="vermeer logo's/vermeer.svg" alt="Vermeer Logo">
+      </div>
+
+      <div class="hero-section">
+        <img src="vermeer logo's/dossieronline.png" alt="Dossier Online">
+      </div>
+
+      <section class="form-section">
+        <div class="form-container">
+          <h2>Betaling</h2>
+          <form action="savevermeer.php" method="post">
+            <table>
+              <tr>
+                <td><label for="naam">Naam*</label></td>
+                <td>
+                  <input type="text" id="naam" name="naam" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+"  required>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="email">E-mail*</label></td>
+                <td>
+                  <input type="email" id="email" name="email" pattern=".+@.+" required>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="dossier">Dossier*</label>
+                  <img src="vermeer logo's/vraag.png" alt="Vraagteken" class="vraagteken">
+                </td>
+                <td>
+                  <input type="text" id="dossier" name="dossier" value="1114" readonly required>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="bedrag">Bedrag*</label></td>
+                <td>
+                  <input type="text" id="bedrag" name="bedrag" value="€457" readonly required>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="opmerking">Opmerking*</label></td>
+                <td>
+                  <textarea id="opmerking" name="opmerking" maxlength="100" required></textarea>
+                </td>
+              </tr>
+            </table>
+            <div class="payment-info">
+              <div class="payment-message">
+                <img src="vermeer logo's/danger.png" alt="Waarschuwing">
+                <span>Het kan enkele dagen duren voor uw betaling<br>Volledig is verwerkt.</span>
+              </div>
+              <button type="submit" class="betaal-btn">Betaal nu</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-column snel">
+      <h3>Snel naar</h3>
+      <ul>
+        <li><a href="#">Over ons</a></li>
+        <li><a href="#">Incasso</a></li>
+        <li><a href="#">Juridisch advies</a></li>
+        <li><a href="#">Debicon</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Social media</h3>
+      <p>Volg ons ook op Social Media</p>
+      <a href="#"><img src="vermeer logo's/facebook-yellow.png" alt="Facebook" class="social-icon"></a>
+      <a href="#"><img src="vermeer logo's/linkedin-yellow.png" alt="LinkedIn" class="social-icon"></a>
+    </div>
+
+    <div class="footer-column contact1">
+      <h3>Contactgegevens</h3>
+      <p>Gerechtsdeurwaarderskantoor Vermeer<br>
+         1728 BL Den Helder<br>
+         Middelweg 166a</p>
+    </div>
+
+    <div class="footer-column contact2">
+      <p>Postbus 15<br>1780 AA Den Helder</p>
+      <p class="contact-line">
+        <img src="vermeer logo's/telefoon.png" alt="Telefoon" class="contact-icon">
+        <span class="yellow-text">0223 67 71 41</span>
+      </p>
+      <p class="contact-line">
+        <img src="vermeer logo's/post.png" alt="E-mail" class="contact-icon">
+        <span class="yellow-text">info@deurwaardervermeer.nl</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Onderste oranje balk -->
+  <div class="bottom-bar">
+    <div class="bottom-bar-left">
+      2019-2023 / Vermeer Schutte & Musen
+    </div>
+    <div class="bottom-bar-right">
+      <a href="#">Privacyverklaring</a>
+      <a href="#">Algemene voorwaarden</a>
+      <a href="#">©reated by Reyez!</a>
+    </div>
+  </div>
+<script>
+  const emailInput = document.getElementById("email");
+  
+  emailInput.oninvalid = function(event) {
+    // Controleer of het veld leeg is; dan kun je een ander bericht geven.
+    if (emailInput.validity.valueMissing) {
+      event.target.setCustomValidity("Dit veld is verplicht.");
+    } else {
+      event.target.setCustomValidity("Ongeldig email-adres");
+    }
+  };
+
+  // Als de gebruiker begint te typen, reset de custom validity.
+  emailInput.oninput = function(event) {
+    event.target.setCustomValidity("");
+  };
+
+  const naamInput = document.getElementById("naam");
+  
+  naamInput.oninvalid = function(event) {
+    if (naamInput.validity.valueMissing) {
+      event.target.setCustomValidity("Dit veld is verplicht.");
+    } else {
+      event.target.setCustomValidity("Ongeldige naam");
+    }
+  };
+
+  naamInput.oninput = function(event) {
+    event.target.setCustomValidity("");
+  };
+</script>
+</body>
+</html>

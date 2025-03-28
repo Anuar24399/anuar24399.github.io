@@ -1,0 +1,94 @@
+/* Basisinstellingen voor html en body */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Hoofdcontainer die de footer naar onderen duwt */
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #34346D;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Header met het Tikkie-logo */
+  .header-logo {
+    padding-top: 10px; /* Minder ruimte bovenaan */
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Tikkie-logo afbeelding */
+  .tikkie-logo {
+    width: 65px;
+    margin-top: 10px;
+  }
+  
+  /* Succes-container: niet langer verticaal gecentreerd */
+  .success-container {
+    flex: 1; /* Vult de resterende ruimte zodat de footer onderaan blijft */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Inhoud begint aan de bovenkant */
+    padding-top: 20px; /* Kleine ruimte tussen logo en gif */
+  }
+  
+  /* Geslaagd GIF in een cirkel met rand */
+  .success-gif {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid #353575;  /* Toegevoegde rand */
+  }
+  
+  /* Tekst 'Gifje van Anuar' in kleur #9EA0BB, groter en met extra marge */
+  .gifje-text {
+    color: #9EA0BB;
+    margin-top: 20px; /* Vergrote marge tussen gif en tekst */
+    font-size: 18px;  /* Grotere tekst */
+  }
+  
+  /* Titel 'Gelukt, thx!' groter */
+  .success-title {
+    font-size: 36px;  /* Grotere titel */
+    margin: 20px 0 10px;
+  }
+  
+  /* Beschrijving eronder, grotere tekst */
+  .success-description {
+    font-size: 20px;  /* Grotere beschrijvingstekst */
+    margin: 0 20px;
+  }
+  
+  /* Footer, altijd onderaan */
+  .footer {
+    background: #2A2A57;
+    color: white;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;  /* Grotere footertekst */
+  }
+  
+  .footer-left {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .footer-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-right span {
+    color: #727290;
+  }
+  
